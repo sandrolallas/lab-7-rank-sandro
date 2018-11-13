@@ -14,3 +14,18 @@ Sandro's first message in the document.
 Yo wassuppppp
 
 just tryna make a dollar out of 50 cents
+
+```{r}
+library(tidyverse)
+kermit <- read_csv("kermit.csv")
+```
+
+```{r}
+#Side by side histograms of the Score.pre for all respondents, separated by the gender column
+
+kermit_hist <- ggplot(kermit, aes(x = Score.pre ))+ 
+  geom_histogram(bins = 4)+
+  facet_wrap(~Gender)
+kermit_hist
+```
+
